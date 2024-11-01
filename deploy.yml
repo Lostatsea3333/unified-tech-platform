@@ -1,0 +1,16 @@
+- hosts: localhost
+  tasks:
+    - name: Ensure required packages are installed
+      apt:
+        name:
+          - python3-pip
+          - git
+        state: present
+
+    - name: Clone repository
+      git:
+        repo: 'https://your-repo-url.git'
+        dest: /mnt/u/unified-tech-platform
+
+    - name: Run update script
+      command: bash /mnt/u/unified-tech-platform/scripts/update_script.sh

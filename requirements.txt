@@ -1,0 +1,1 @@
+requests\npandas\nschedule\npytest\nsqlite3
